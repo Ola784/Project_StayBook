@@ -4,6 +4,7 @@
     {
         IProductRepository ProductRepository { get; }
         IOrderRepository OrderRepository { get; }
+        IUserRepository UserRepository { get; }
 
         void Commit();
     }

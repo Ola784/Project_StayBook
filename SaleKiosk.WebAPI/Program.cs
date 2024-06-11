@@ -11,6 +11,7 @@ using FluentValidation;
 using SaleKiosk.Application.Validators;
 using NLog.Web;
 using NLog;
+using SaleKiosk.Domain.Models;
 
 // Early init of NLog to allow startup and exception logging, before host is built
 var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
@@ -38,18 +39,26 @@ try
     builder.Services.AddFluentValidationAutoValidation();
 
     // rejestracja kontekstu bazy w kontenerze IoC
-    // var sqliteConnectionString = "Data Source=Kiosk.WebAPI.Logger.db";
-    var sqliteConnectionString = @"Data Source=c:\DyskD\SaleKioskStudent.db";
+    //var sqliteConnectionString = @"Data Source=Kiosk.WebAPI.Logger.db";
+     // var sqliteConnectionString = @"Data Source=c:\DyskD\SaleKioskStudent.db";
+    var sqliteConnectionString = @"Data Source=c:\Database\database.db";
+
+    //var sqliteConnectionString = @"Data Source=C:/Users/olaes/Downloads/SaleKiosk_Order_Completed/database.db";
     builder.Services.AddDbContext<KioskDbContext>(options =>
         options.UseSqlite(sqliteConnectionString));
 
     // rejestracja walidatora
     builder.Services.AddScoped<IValidator<CreateProductDto>, RegisterCreateProductDtoValidator>();
+    builder.Services.AddScoped<IValidator<CreateUserDto>, RegisterCreateUserDtoValidator>();//
 
     builder.Services.AddScoped<IKioskUnitOfWork, KioskUnitOfWork>();
     builder.Services.AddScoped<IProductRepository, ProductRepository>();
     builder.Services.AddScoped<DataSeeder>();
     builder.Services.AddScoped<IProductService, ProductService>();
+
+    builder.Services.AddScoped<IUserRepository, UserRepository>();//
+    builder.Services.AddScoped<IUserService, UserService>();//
+
 
     builder.Services.AddScoped<IOrderRepository, OrderRepository>();
     builder.Services.AddScoped<IOrderService, OrderService>();

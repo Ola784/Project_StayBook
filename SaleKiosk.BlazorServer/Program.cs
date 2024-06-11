@@ -34,8 +34,8 @@ try
     builder.Services.AddAutoMapper(typeof(KioskMappingProfile));
 
     // rejestracja kontekstu bazy w kontenerze IoC
-    // var sqliteConnectionString = "Data Source=Kiosk.WebAPI.Logger.db";
-    var sqliteConnectionString = @"Data Source=c:\DyskD\SaleKioskStudent.db";
+    var sqliteConnectionString = @"Data Source=c:\Database\database.db";
+
     builder.Services.AddDbContext<KioskDbContext>(options =>
         options.UseSqlite(sqliteConnectionString));
 
@@ -43,10 +43,18 @@ try
     builder.Services.AddScoped<IValidator<CreateProductDto>, RegisterCreateProductDtoValidator>();
     builder.Services.AddScoped<IValidator<UpdateProductDto>, RegisterUpdateProductDtoValidator>();
 
+    builder.Services.AddScoped<IValidator<CreateUserDto>, RegisterCreateUserDtoValidator>();
+    builder.Services.AddScoped<IValidator<UpdateUserDto>, RegisterUpdateUserDtoValidator>();
+
     builder.Services.AddScoped<IKioskUnitOfWork, KioskUnitOfWork>();
     builder.Services.AddScoped<IProductRepository, ProductRepository>();
     builder.Services.AddScoped<DataSeeder>();
     builder.Services.AddScoped<IProductService, ProductService>();
+
+    builder.Services.AddScoped<IUserRepository, UserRepository>();//
+    builder.Services.AddScoped<IUserService, UserService>();
+
+
     builder.Services.AddScoped<IFileService, FileService>();
 
     builder.Services.AddScoped<IOrderRepository, OrderRepository>();

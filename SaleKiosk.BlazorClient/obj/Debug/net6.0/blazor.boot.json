@@ -1,7 +1,7 @@
 {
   "entryAssembly": "SaleKiosk.BlazorClient",
   "resources": {
-    "hash": "sha256-4bZaD984VD5q5FGo5iGRHniKjS7DqAFK+a9G+MZ3cy0=",
+    "hash": "sha256-eevK+hbj7y64+IQ21PMTHQZn3C70cfYGy4yzWkDkh6Y=",
     "runtime": {
       "dotnet.6.0.25.onxbr9cat6.js": "sha256-1jUGCCSGH9JWhkqbHdQk8JBjBI8K/VC63En5zlypVps=",
       "dotnet.timezones.blat": "sha256-KsGUR9nqtXb3Hy6IrNlnc1HoSS+AFlsXTX9rq4oChtA=",
@@ -204,12 +204,12 @@
       "mscorlib.dll": "sha256-veli+XvWHzkA3s4t4DKI+XiyNMpfHQjiO002+ExANkU=",
       "netstandard.dll": "sha256-O9JhHo5KqxkmwmapuxuhG/iMRV7RHcrCDO9z+yv+8yI=",
       "System.Private.CoreLib.dll": "sha256-6rKu8tPdUGsvbSpesoNMVzbx7bNqPRMPV34eI7vSYaQ=",
-      "SaleKiosk.SharedKernel.dll": "sha256-lyldqmV8iCPNaHFAspV7qDh4vOJB59Qxq6trKzlCSSs=",
-      "SaleKiosk.BlazorClient.dll": "sha256-G+1f5AWjumRNc/FcS/htgYj3dFuCkyvRjJAiVICrfxw="
+      "SaleKiosk.SharedKernel.dll": "sha256-uS0nMsbo8rGSl1i2djj5kuQ6skaopGcKfKN6SkRLVqo=",
+      "SaleKiosk.BlazorClient.dll": "sha256-CW5eRY8OOVtX3lap2LqPEMWx813+EOzRXwcLquGLYGg="
     },
     "pdb": {
-      "SaleKiosk.SharedKernel.pdb": "sha256-JN0ozSwtZaEsQVDvCyoY1aPf25JuxzpTgDoL8VA1F5o=",
-      "SaleKiosk.BlazorClient.pdb": "sha256-zOkvRLqaevqJyCyBpeXYGY9T/RYP7zeUDeWHSszZEXo="
+      "SaleKiosk.SharedKernel.pdb": "sha256-8WAF7187KRd9tPxGXIhHSESY/+PmHEL92rGk7PKgxuk=",
+      "SaleKiosk.BlazorClient.pdb": "sha256-fcTJimoCGCa+cqJHKYcxSQeQ5LrQrsrQfuJbDzaLLlk="
     },
     "runtimeAssets": {
       "dotnet.wasm": {

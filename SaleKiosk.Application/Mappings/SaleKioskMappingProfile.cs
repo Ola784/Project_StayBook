@@ -21,6 +21,10 @@ namespace SaleKiosk.Application.Mappings
             CreateMap<OrderDetail, OrderDetailDto>().ReverseMap();
             CreateMap<Order, OrderDto>().ReverseMap();
 
+            CreateMap<User, UserDto>();
+            CreateMap<CreateUserDto, User>()
+                .ForMember(m => m.Email, c => c.MapFrom(s => s.Email));
+
         }
     }
 }

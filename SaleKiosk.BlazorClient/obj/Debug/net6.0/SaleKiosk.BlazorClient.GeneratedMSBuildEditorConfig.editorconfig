@@ -46,6 +46,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcUHJvZHVjdExpc3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/olaes/Downloads/SaleKiosk_Order_Completed/SaleKiosk.BlazorClient/Pages/UserDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckRldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/olaes/Downloads/SaleKiosk_Order_Completed/SaleKiosk.BlazorClient/Pages/Users/SignIn.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNcU2lnbkluLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/olaes/Downloads/SaleKiosk_Order_Completed/SaleKiosk.BlazorClient/Pages/Users/SignUp.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNcU2lnblVwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/olaes/Downloads/SaleKiosk_Order_Completed/SaleKiosk.BlazorClient/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

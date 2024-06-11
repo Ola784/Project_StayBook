@@ -10,11 +10,14 @@ namespace SaleKiosk.Infrastructure
         public IProductRepository ProductRepository { get; }
         public IOrderRepository OrderRepository { get; }
 
-        public KioskUnitOfWork(KioskDbContext context, IProductRepository productRepository, IOrderRepository orderRepository)
+        public IUserRepository UserRepository { get; }
+
+        public KioskUnitOfWork(KioskDbContext context, IProductRepository productRepository, IOrderRepository orderRepository, IUserRepository userRepository)
         {
             this._context = context;
             this.ProductRepository = productRepository;
             this.OrderRepository = orderRepository;
+            this.UserRepository = userRepository;
         }
 
         public void Commit()

@@ -42,8 +42,37 @@ namespace SaleKiosk.Infrastructure
                             ImageUrl = "/images/no-image-icon.png",
                         },
                     };
-                    _dbContext.Products.AddRange(products);
-                    _dbContext.SaveChanges();
+
+                    if (!_dbContext.Users.Any())
+                    {
+                        var users = new List<User>
+                    {
+                        new User()
+                        {
+                            Id = 1,
+                            FirstName="Jan",
+                            LastName="Kowalski",
+                            Email="jan.kowalski@onet.pl",
+                            PhoneNumber="123456",
+                            Username="Jan123",
+                            ImageUrl = "/images/no-image-icon.png",
+                        },
+
+                        new User()
+                        {
+                            Id = 2,
+                            FirstName="Ania",
+                            LastName="Nowak",
+                            Email="anna.nowak@onet.pl",
+                            PhoneNumber="345678",
+                            Username="Ania11",
+                            ImageUrl = "/images/no-image-icon.png",
+                        },
+                    };
+                        _dbContext.Products.AddRange(products);
+                        _dbContext.Users.AddRange(users);
+                        _dbContext.SaveChanges();
+                    }
                 }
             }
         }
